@@ -1,0 +1,14 @@
+FROM openjdk:16-buster
+RUN apt-get update \
+    && apt-get install vim telnet zip htop tree -y
+
+# gradle
+RUN wget https://downloads.gradle-dn.com/distributions/gradle-7.3-bin.zip \
+    && unzip -d /usr/ gradle-7.3-bin.zip \
+    && mv /usr/gradle-7.3 /usr/gradle \
+    && rm -f gradle-7.3-bin.zip
+ENV PATH $PATH:/usr/gradle/bin
+
+
+## image
+## jdk16-gradle:v1
