@@ -55,4 +55,4 @@ RUN apk update \
 
 
 ## image
-## jdk11-gradle:v1 
+## basic/jdk11-gradle:v1 

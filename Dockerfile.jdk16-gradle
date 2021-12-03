@@ -11,4 +11,4 @@ ENV PATH $PATH:/usr/gradle/bin
 
 
 ## image
-## jdk16-gradle:v1
+## basic/jdk16-gradle:v1

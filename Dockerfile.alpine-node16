@@ -6,5 +6,5 @@ RUN apk update \
 
 
 ## image
-## alpine-node16:v1
+## basic/alpine-node16:v1
 
