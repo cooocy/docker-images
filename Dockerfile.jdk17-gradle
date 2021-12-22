@@ -1,0 +1,14 @@
+FROM alpine:3.15.0-rc.4
+
+RUN apk update \
+    && apk add bash vim zip curl busybox-extras htop tree
+    
+# jdk
+RUN apk add openjdk17
+
+# gradle
+RUN wget https://downloads.gradle-dn.com/distributions/gradle-7.3-bin.zip \
+    && unzip -d /usr/ gradle-7.3-bin.zip \
+    && mv /usr/gradle-7.3 /usr/gradle \
+    && rm -f gradle-7.3-bin.zip
+ENV PATH $PATH:/usr/gradle/bin
