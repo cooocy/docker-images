@@ -1,5 +1,7 @@
 FROM alpine:3.15.0-rc.4
 
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
 RUN apk update \
     && apk add bash vim zip curl busybox-extras htop tree
 
