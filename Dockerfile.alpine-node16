@@ -1,5 +1,7 @@
-# see Dockerfile.alpine
-FROM basic/alpine:3.15
+FROM alpine:3.15.0-rc.4
+
+RUN apk update \
+    && apk add bash vim zip curl busybox-extras htop tree
 
 RUN apk update \
     && apk add nodejs npm
